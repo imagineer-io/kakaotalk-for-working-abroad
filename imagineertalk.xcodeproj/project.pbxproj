@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DF7B57952862D048425D5D8 /* Pods_imagineertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC42104ED2F910C348DC85FB /* Pods_imagineertalk.framework */; };
 		A998230C1E8A65E100E6798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998230B1E8A65E100E6798F /* AppDelegate.swift */; };
 		A998230E1E8A65E100E6798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998230D1E8A65E100E6798F /* ViewController.swift */; };
 		A99823111E8A65E100E6798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A998230F1E8A65E100E6798F /* Main.storyboard */; };
 		A99823131E8A65E100E6798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99823121E8A65E100E6798F /* Assets.xcassets */; };
 		A99823161E8A65E100E6798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99823141E8A65E100E6798F /* LaunchScreen.storyboard */; };
+		A998231E1E8A6F5900E6798F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A998231D1E8A6F5900E6798F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9EEB7E99F8A03DE4FEB8526B /* Pods-imagineertalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.release.xcconfig"; sourceTree = "<group>"; };
 		A99823081E8A65E100E6798F /* imagineertalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagineertalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A998230B1E8A65E100E6798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A998230D1E8A65E100E6798F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		A99823121E8A65E100E6798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A99823151E8A65E100E6798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A99823171E8A65E100E6798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A998231D1E8A6F5900E6798F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D7597ADAE8007D15975CF362 /* Pods-imagineertalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.debug.xcconfig"; sourceTree = "<group>"; };
+		FC42104ED2F910C348DC85FB /* Pods_imagineertalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagineertalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DF7B57952862D048425D5D8 /* Pods_imagineertalk.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0A96A2128DC43DC7E134C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D7597ADAE8007D15975CF362 /* Pods-imagineertalk.debug.xcconfig */,
+				9EEB7E99F8A03DE4FEB8526B /* Pods-imagineertalk.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A99822FF1E8A65E100E6798F = {
 			isa = PBXGroup;
 			children = (
 				A998230A1E8A65E100E6798F /* imagineertalk */,
 				A99823091E8A65E100E6798F /* Products */,
+				6C0A96A2128DC43DC7E134C5 /* Pods */,
+				E16290BB123A49C5CD0B1AF0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +78,17 @@
 				A99823121E8A65E100E6798F /* Assets.xcassets */,
 				A99823141E8A65E100E6798F /* LaunchScreen.storyboard */,
 				A99823171E8A65E100E6798F /* Info.plist */,
+				A998231D1E8A6F5900E6798F /* GoogleService-Info.plist */,
 			);
 			path = imagineertalk;
+			sourceTree = "<group>";
+		};
+		E16290BB123A49C5CD0B1AF0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC42104ED2F910C348DC85FB /* Pods_imagineertalk.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A998231A1E8A65E100E6798F /* Build configuration list for PBXNativeTarget "imagineertalk" */;
 			buildPhases = (
+				4FB057A08D414FAEC6D2F3CE /* [CP] Check Pods Manifest.lock */,
 				A99823041E8A65E100E6798F /* Sources */,
 				A99823051E8A65E100E6798F /* Frameworks */,
 				A99823061E8A65E100E6798F /* Resources */,
+				B9BA7A482E69C2B7F4716624 /* [CP] Embed Pods Frameworks */,
+				CBD3B87AD455512ED5752015 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				A99823161E8A65E100E6798F /* LaunchScreen.storyboard in Resources */,
+				A998231E1E8A6F5900E6798F /* GoogleService-Info.plist in Resources */,
 				A99823131E8A65E100E6798F /* Assets.xcassets in Resources */,
 				A99823111E8A65E100E6798F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4FB057A08D414FAEC6D2F3CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9BA7A482E69C2B7F4716624 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBD3B87AD455512ED5752015 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A99823041E8A65E100E6798F /* Sources */ = {
@@ -256,6 +335,7 @@
 		};
 		A998231B1E8A65E100E6798F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7597ADAE8007D15975CF362 /* Pods-imagineertalk.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = imagineertalk/Info.plist;
@@ -268,6 +348,7 @@
 		};
 		A998231C1E8A65E100E6798F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EEB7E99F8A03DE4FEB8526B /* Pods-imagineertalk.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = imagineertalk/Info.plist;

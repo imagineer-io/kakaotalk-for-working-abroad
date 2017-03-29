@@ -7,4 +7,5 @@ target 'imagineertalk' do
 
   # Pods for imagineertalk
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 end

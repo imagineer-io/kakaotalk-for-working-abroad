@@ -8,16 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0DF7B57952862D048425D5D8 /* Pods_imagineertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC42104ED2F910C348DC85FB /* Pods_imagineertalk.framework */; };
+		A915E0231E8B8FAE00E63106 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A915E0221E8B8FAE00E63106 /* GoogleService-Info.plist */; };
 		A998230C1E8A65E100E6798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998230B1E8A65E100E6798F /* AppDelegate.swift */; };
 		A998230E1E8A65E100E6798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998230D1E8A65E100E6798F /* ViewController.swift */; };
 		A99823111E8A65E100E6798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A998230F1E8A65E100E6798F /* Main.storyboard */; };
 		A99823131E8A65E100E6798F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A99823121E8A65E100E6798F /* Assets.xcassets */; };
 		A99823161E8A65E100E6798F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A99823141E8A65E100E6798F /* LaunchScreen.storyboard */; };
-		A998231E1E8A6F5900E6798F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A998231D1E8A6F5900E6798F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9EEB7E99F8A03DE4FEB8526B /* Pods-imagineertalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.release.xcconfig"; sourceTree = "<group>"; };
+		A915E0221E8B8FAE00E63106 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A99823081E8A65E100E6798F /* imagineertalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagineertalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A998230B1E8A65E100E6798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A998230D1E8A65E100E6798F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +26,6 @@
 		A99823121E8A65E100E6798F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A99823151E8A65E100E6798F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A99823171E8A65E100E6798F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A998231D1E8A6F5900E6798F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D7597ADAE8007D15975CF362 /* Pods-imagineertalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.debug.xcconfig"; sourceTree = "<group>"; };
 		FC42104ED2F910C348DC85FB /* Pods_imagineertalk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_imagineertalk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -78,7 +78,7 @@
 				A99823121E8A65E100E6798F /* Assets.xcassets */,
 				A99823141E8A65E100E6798F /* LaunchScreen.storyboard */,
 				A99823171E8A65E100E6798F /* Info.plist */,
-				A998231D1E8A6F5900E6798F /* GoogleService-Info.plist */,
+				A915E0221E8B8FAE00E63106 /* GoogleService-Info.plist */,
 			);
 			path = imagineertalk;
 			sourceTree = "<group>";
@@ -153,8 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A915E0231E8B8FAE00E63106 /* GoogleService-Info.plist in Resources */,
 				A99823161E8A65E100E6798F /* LaunchScreen.storyboard in Resources */,
-				A998231E1E8A6F5900E6798F /* GoogleService-Info.plist in Resources */,
 				A99823131E8A65E100E6798F /* Assets.xcassets in Resources */,
 				A99823111E8A65E100E6798F /* Main.storyboard in Resources */,
 			);
@@ -378,6 +378,7 @@
 				A998231C1E8A65E100E6798F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

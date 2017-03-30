@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class AuthViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func buttonPressed(_ sender: Any) {
+//        if let email = emailTextField.text {}
+        FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: nil)
     }
     
     override func viewDidLoad() {

@@ -13,14 +13,23 @@ class AuthViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var isLogin: Bool?
     
     @IBAction func buttonPressed(_ sender: Any) {
 //        if let email = emailTextField.text {}
-        FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {_, error in
-            if (error == nil) {
-                self.performSegue(withIdentifier: "ToMain", sender: sender)
-            }
-        })
+        if isLogin! {
+            FIRAuth.auth()?.signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {_, error in
+                if (error == nil) {
+                    self.performSegue(withIdentifier: "ToMain", sender: sender)
+                }
+            })
+        } else {
+            FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {_, error in
+                if (error == nil) {
+                    self.performSegue(withIdentifier: "ToMain", sender: sender)
+                }
+            })
+        }
     }
     
     override func viewDidLoad() {

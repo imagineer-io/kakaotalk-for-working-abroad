@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pre Auth View Controller-->
         <scene sceneID="zru-So-1s1">
             <objects>
-                <viewController id="cRR-oE-WOK" sceneMemberID="viewController">
+                <viewController id="cRR-oE-WOK" customClass="PreAuthViewController" customModule="imagineertalk" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9hV-Wf-lkk"/>
                         <viewControllerLayoutGuide type="bottom" id="Z1y-kF-jvB"/>
@@ -135,12 +135,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmJ-1T-h36">
+                                <rect key="frame" x="165" y="390" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="HdV-ZW-a5F"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3oP-OB-FLU" firstAttribute="centerY" secondItem="oKS-wg-2on" secondAttribute="centerY" id="0CD-SF-lS3"/>
                             <constraint firstItem="3oP-OB-FLU" firstAttribute="centerX" secondItem="QNn-nz-c1L" secondAttribute="centerX" id="DFq-2x-aSR"/>
+                            <constraint firstItem="NmJ-1T-h36" firstAttribute="top" secondItem="QNn-nz-c1L" secondAttribute="bottom" constant="8" symbolic="YES" id="Qlc-l4-2MC"/>
                             <constraint firstItem="QNn-nz-c1L" firstAttribute="top" secondItem="3oP-OB-FLU" secondAttribute="bottom" constant="8" symbolic="YES" id="fWT-1C-kSz"/>
+                            <constraint firstItem="NmJ-1T-h36" firstAttribute="leading" secondItem="3oP-OB-FLU" secondAttribute="leading" id="nWP-nZ-UiO"/>
                             <constraint firstItem="3oP-OB-FLU" firstAttribute="centerX" secondItem="oKS-wg-2on" secondAttribute="centerX" id="sqs-dF-MKZ"/>
                         </constraints>
                     </view>
@@ -244,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="3391" y="-562"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwy-UK-ALf">

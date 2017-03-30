@@ -103,11 +103,54 @@
                     <connections>
                         <outlet property="emailTextField" destination="X6l-0h-IMw" id="Anq-Jt-Ugv"/>
                         <outlet property="passwordTextField" destination="kEd-7s-w1U" id="G8Q-1w-YSV"/>
+                        <segue destination="y3F-sU-BpR" kind="show" identifier="ToMain" id="DDl-1z-L2p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HBH-l0-oTZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1829.5999999999999" y="-562.66866566716647"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="K9P-Gh-XKH">
+            <objects>
+                <viewController id="y3F-sU-BpR" customClass="MainViewController" customModule="imagineertalk" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7VU-GI-h8r"/>
+                        <viewControllerLayoutGuide type="bottom" id="2dY-Kp-Sj1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oKS-wg-2on">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNn-nz-c1L">
+                                <rect key="frame" x="162" y="352" width="52" height="30"/>
+                                <state key="normal" title="로그아웃"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="y3F-sU-BpR" eventType="touchUpInside" id="LC2-Gw-GLZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이메일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3oP-OB-FLU">
+                                <rect key="frame" x="165" y="323" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3oP-OB-FLU" firstAttribute="centerY" secondItem="oKS-wg-2on" secondAttribute="centerY" id="0CD-SF-lS3"/>
+                            <constraint firstItem="3oP-OB-FLU" firstAttribute="centerX" secondItem="QNn-nz-c1L" secondAttribute="centerX" id="DFq-2x-aSR"/>
+                            <constraint firstItem="QNn-nz-c1L" firstAttribute="top" secondItem="3oP-OB-FLU" secondAttribute="bottom" constant="8" symbolic="YES" id="fWT-1C-kSz"/>
+                            <constraint firstItem="3oP-OB-FLU" firstAttribute="centerX" secondItem="oKS-wg-2on" secondAttribute="centerX" id="sqs-dF-MKZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="3oP-OB-FLU" id="p9s-hc-1nj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EPL-1Z-T2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2633" y="-563"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

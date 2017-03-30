@@ -1,5 +1,5 @@
 //
-//  AuthViewController.swift
+//  MainViewController.swift
 //  imagineertalk
 //
 //  Created by marco on 3/30/17.
@@ -9,23 +9,22 @@
 import UIKit
 import FirebaseAuth
 
-class AuthViewController: UIViewController {
+class MainViewController: UIViewController {
 
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var emailLabel: UILabel!
+    var handle:FIRAuthStateDidChangeListenerHandle?
     
-    @IBAction func buttonPressed(_ sender: Any) {
-//        if let email = emailTextField.text {}
-        FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {_, error in
-            if (error == nil) {
-                self.performSegue(withIdentifier: "ToMain", sender: sender)
-            }
-        })
+    
+    @IBAction func logoutButtonPressed(_ sender: Any) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        handle = FIRAuth.auth()?.addStateDidChangeListener() { (auth, user) in
+            if let user = auth.currentUser {
+                self.emailLabel.text = user.email
+            }
+        }
         // Do any additional setup after loading the view.
     }
 

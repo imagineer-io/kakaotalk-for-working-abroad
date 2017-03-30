@@ -10,6 +10,7 @@
 		0DF7B57952862D048425D5D8 /* Pods_imagineertalk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC42104ED2F910C348DC85FB /* Pods_imagineertalk.framework */; };
 		A915E0231E8B8FAE00E63106 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A915E0221E8B8FAE00E63106 /* GoogleService-Info.plist */; };
 		A95660F41E8CE73C00196F13 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95660F31E8CE73C00196F13 /* AuthViewController.swift */; };
+		A95660F61E8D088B00196F13 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A95660F51E8D088B00196F13 /* MainViewController.swift */; };
 		A998230C1E8A65E100E6798F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998230B1E8A65E100E6798F /* AppDelegate.swift */; };
 		A998230E1E8A65E100E6798F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A998230D1E8A65E100E6798F /* ViewController.swift */; };
 		A99823111E8A65E100E6798F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A998230F1E8A65E100E6798F /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 		9EEB7E99F8A03DE4FEB8526B /* Pods-imagineertalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagineertalk.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagineertalk/Pods-imagineertalk.release.xcconfig"; sourceTree = "<group>"; };
 		A915E0221E8B8FAE00E63106 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A95660F31E8CE73C00196F13 /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A95660F51E8D088B00196F13 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A99823081E8A65E100E6798F /* imagineertalk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagineertalk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A998230B1E8A65E100E6798F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A998230D1E8A65E100E6798F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				A99823171E8A65E100E6798F /* Info.plist */,
 				A915E0221E8B8FAE00E63106 /* GoogleService-Info.plist */,
 				A95660F31E8CE73C00196F13 /* AuthViewController.swift */,
+				A95660F51E8D088B00196F13 /* MainViewController.swift */,
 			);
 			path = imagineertalk;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				A998230E1E8A65E100E6798F /* ViewController.swift in Sources */,
 				A95660F41E8CE73C00196F13 /* AuthViewController.swift in Sources */,
 				A998230C1E8A65E100E6798F /* AppDelegate.swift in Sources */,
+				A95660F61E8D088B00196F13 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

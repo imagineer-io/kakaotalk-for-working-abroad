@@ -16,6 +16,12 @@ class MainViewController: UIViewController {
     
     
     @IBAction func logoutButtonPressed(_ sender: Any) {
+        do {
+            try FIRAuth.auth()?.signOut()
+            self.navigationController?.popToRootViewController(animated: true)
+        } catch {
+            print("signout failed")
+        }
     }
     
     override func viewDidLoad() {
@@ -23,6 +29,8 @@ class MainViewController: UIViewController {
         handle = FIRAuth.auth()?.addStateDidChangeListener() { (auth, user) in
             if let user = auth.currentUser {
                 self.emailLabel.text = user.email
+            } else {
+                self.emailLabel.text = "로그아웃 됨"
             }
         }
         // Do any additional setup after loading the view.

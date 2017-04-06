@@ -57,11 +57,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func configureDatabase() {
         ref = FIRDatabase.database().reference()
         // Listen for new messages in the Firebase database
-        _refHandle = self.ref.child("messages").observe(.childAdded, with: { [weak self] (snapshot) -> Void in
-            guard let strongSelf = self else { return }
-            strongSelf.messages.append(snapshot)
-            strongSelf.chatTableView.insertRows(at: [IndexPath(row: strongSelf.messages.count-1, section: 0)], with: .automatic)
-        })
+        _refHandle = self.ref.child("messages")
+//            .queryOrdered(byChild: "text")
+//            .queryEqual(toValue: "Abc")
+            .observe(.childAdded, with: { [weak self] (snapshot) -> Void in
+                guard let strongSelf = self else { return }
+                strongSelf.messages.append(snapshot)
+                strongSelf.chatTableView.insertRows(at: [IndexPath(row: strongSelf.messages.count-1, section: 0)], with: .automatic)
+            })
     }
 }
 

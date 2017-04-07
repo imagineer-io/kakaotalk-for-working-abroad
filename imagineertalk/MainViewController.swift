@@ -66,6 +66,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return users.count
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ChatDetailSegue", sender: self)
+    }
+    
     deinit {
         if let refHandle = _refHandle {
             self.ref.child("users").removeObserver(withHandle: refHandle)
@@ -85,5 +89,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             })
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let userSnapshot: FIRDataSnapshot! = self.users[userTableView.indexPathForSelectedRow!.row]
+        guard let user = userSnapshot.value as? [String:String] else { return }
+        
+        let viewController = segue.destination as! ViewController
+        
+        viewController.targetEmail = user["email"] ?? "[email]"
+        viewController.targetUID = userSnapshot.key
+    }
 
 }

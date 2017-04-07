@@ -18,6 +18,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var messages: [FIRDataSnapshot]! = []
     var _refHandle: FIRDatabaseHandle!
     
+    var targetEmail: String?
+    var targetUID: String?
+    
     @IBAction func sendButtonPressed(_ sender: Any) {
         var mdata = [String: String]()
         mdata["text"] = chatTextView.text
@@ -62,8 +65,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //            .queryEqual(toValue: "Abc")
             .observe(.childAdded, with: { [weak self] (snapshot) -> Void in
                 guard let strongSelf = self else { return }
-                strongSelf.messages.append(snapshot)
-                strongSelf.chatTableView.insertRows(at: [IndexPath(row: strongSelf.messages.count-1, section: 0)], with: .automatic)
+
+                
+                let messageSnapshot: FIRDataSnapshot! = snapshot
+                guard let message = messageSnapshot.value as? [String:String] else { return }
+//                let text = message["text"] ?? "[text]"
+                let sender = message["sender"]
+                let receiver = message["receiver"]
+                if (sender == strongSelf.targetUID || sender == FIRAuth.auth()!.currentUser!.uid)
+                    && (receiver == strongSelf.targetUID || receiver == FIRAuth.auth()!.currentUser!.uid) {
+                    strongSelf.messages.append(snapshot)
+                    strongSelf.chatTableView.insertRows(at: [IndexPath(row: strongSelf.messages.count-1, section: 0)], with: .automatic)
+                }
             })
     }
 }

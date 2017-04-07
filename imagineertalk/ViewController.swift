@@ -24,6 +24,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func sendButtonPressed(_ sender: Any) {
         var mdata = [String: String]()
         mdata["text"] = chatTextView.text
+        mdata["sender"] = FIRAuth.auth()!.currentUser!.uid
+        mdata["receiver"] = targetUID
         
         // Push data to Firebase Database
         self.ref.child("messages").childByAutoId().setValue(mdata)
@@ -42,7 +44,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         // Unpack message from Firebase DataSnapshot
         let messageSnapshot: FIRDataSnapshot! = self.messages[indexPath.row]
         guard let message = messageSnapshot.value as? [String:String] else { return cell }
-        let text = message["text"] ?? "[text]"
+        let sender = message["sender"]
+        var text = "[text]"
+        if sender == targetUID {
+            text = "\(targetEmail!) : \(message["text"]!)"
+        } else {
+            text = "Me : \(message["text"]!)"
+        }
+        
         cell.textLabel?.text = text
         return cell
     }

@@ -158,6 +158,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="y3F-sU-BpR" id="Lfk-pX-Dyv"/>
+                                    <outlet property="delegate" destination="y3F-sU-BpR" id="ezm-7h-Z1k"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -170,9 +174,8 @@
                     </view>
                     <connections>
                         <outlet property="emailLabel" destination="3oP-OB-FLU" id="p9s-hc-1nj"/>
-                        <outlet property="userTable" destination="BEd-u2-UiO" id="Zro-eu-ObL"/>
                         <outlet property="userTableView" destination="BEd-u2-UiO" id="LT9-lf-hh2"/>
-                        <segue destination="BYZ-38-t0r" kind="show" id="vZn-zy-Mld"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ChatDetailSegue" id="vZn-zy-Mld"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPL-1Z-T2f" userLabel="First Responder" sceneMemberID="firstResponder"/>

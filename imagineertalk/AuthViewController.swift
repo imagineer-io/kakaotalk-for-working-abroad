@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseAuth
 
 class AuthViewController: UIViewController {
@@ -14,6 +15,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     var isLogin: Bool?
+    var ref: FIRDatabaseReference!
     
     @IBAction func buttonPressed(_ sender: Any) {
 //        if let email = emailTextField.text {}
@@ -24,9 +26,15 @@ class AuthViewController: UIViewController {
                 }
             })
         } else {
-            FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {_, error in
+            FIRAuth.auth()?.createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: {user, error in
                 if (error == nil) {
                     self.performSegue(withIdentifier: "ToMain", sender: sender)
+//                    let mdata = [
+//                        user!.uid : ["email": user!.email]
+//                    ]
+//                    self.ref.child("users").setValue(mdata)
+                    let mdata = ["email": user!.email]
+                    self.ref.child("users/\(user!.uid)").setValue(mdata)
                 }
             })
         }
@@ -34,7 +42,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
     }
 
